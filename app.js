@@ -1,33 +1,36 @@
-let currentInput = '';
-let currentOperator = '';
+let entradaAtual = '';
+let operadorAtual = '';
 
-function appendNumber(number) {
-    currentInput += number;
-    document.getElementById('campo').value = currentInput;
+function adicionarNumero(numero) {
+    entradaAtual += numero;
+    document.getElementById('campo').value = entradaAtual;
 }
 
-function appendOperator(operator) {
-    if (currentInput !== '' && currentOperator !== '') {
-        currentInput += ` ${currentOperator} `;
+function adicionarOperador(operador) {
+    if (entradaAtual !== '' && operadorAtual !== '') {
+        entradaAtual += ` ${operadorAtual} `;
     }
-    currentOperator = operator;
-    currentInput += ` ${operator} `;
-    document.getElementById('campo').value = currentInput;
+    operadorAtual = operador;
+    entradaAtual += ` ${operador} `;
+    document.getElementById('campo').value = entradaAtual;
 }
 
-function calculate() {
+function calcular() {
     try {
-        const result = eval(currentInput);
-        document.getElementById('campo').value = result;
-        currentInput = result;
-        currentOperator = '';
+        const resultado = eval(entradaAtual);
+        
+        const resultadoCientifico = resultado.toExponential();
+
+        document.getElementById('campo').value = resultadoCientifico;
+        entradaAtual = resultadoCientifico;
+        operadorAtual = '';
     } catch (error) {
-        document.getElementById('campo').value = 'Error';
+        document.getElementById('campo').value = 'Erro';
     }
 }
 
-function clearDisplay() {
-    currentInput = '';
-    currentOperator = '';
+function limparTela() {
+    entradaAtual = '';
+    operadorAtual = '';
     document.getElementById('campo').value = '';
 }
