@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -12,28 +12,28 @@
     <div class="flex-container">
         <input type="text" id="campo" readonly>
         <div class="primeiro">
-            <button class="valor" onclick="appendNumber(8)">8</button>
-            <button class="valor" onclick="appendNumber(9)">9</button>
-            <button class="valor" onclick="appendNumber(7)">7</button>
-            <button class="valor" onclick="appendOperator('/')">/</button>
+            <button class="valor" onclick="adicionarNumero(8)">8</button>
+            <button class="valor" onclick="adicionarNumero(9)">9</button>
+            <button class="valor" onclick="adicionarNumero(7)">7</button>
+            <button class="valor" onclick="adicionarOperador('/')">/</button>
         </div>
         <div class="segundo">
-            <button class="valor" onclick="appendNumber(6)">6</button>
-            <button class="valor" onclick="appendNumber(5)">5</button>
-            <button class="valor" onclick="appendNumber(4)">4</button>
-            <button class="valor" onclick="appendOperator('*')">*</button>
+            <button class="valor" onclick="adicionarNumero(6)">6</button>
+            <button class="valor" onclick="adicionarNumero(5)">5</button>
+            <button class="valor" onclick="adicionarNumero(4)">4</button>
+            <button class="valor" onclick="adicionarOperador('*')">*</button>
         </div>
         <div class="terceiro">
-            <button class="valor" onclick="appendNumber(3)">3</button>
-            <button class="valor" onclick="appendNumber(2)">2</button>
-            <button class="valor" onclick="appendNumber(1)">1</button>
-            <button class="valor" onclick="appendOperator('-')">-</button>
+            <button class="valor" onclick="adicionarNumero(3)">3</button>
+            <button class="valor" onclick="adicionarNumero(2)">2</button>
+            <button class="valor" onclick="adicionarNumero(1)">1</button>
+            <button class="valor" onclick="adicionarOperador('-')">-</button>
         </div>
         <div>
-            <button class="valor" onclick="appendNumber(0)">0</button>
-            <button id="botão" onclick="calculate()">=</button>
-            <button class="valor" onclick="appendOperator('+')">+</button>
-            <button class="valor" id="clear" onclick="clearDisplay()">C</button>
+            <button class="valor" onclick="adicionarNumero(0)">0</button>
+            <button id="botao" onclick="calcular()">=</button>
+            <button class="valor" onclick="adicionarOperador('+')">+</button>
+            <button class="valor" id="limpar" onclick="limparTela()">C</button>
         </div>
     </div>
     <script src="app.js"></script>
